@@ -1,3 +1,83 @@
-<div class="bg-primary h-screen">
-  <h1 class="text-white">Hero Section</h1>
+<div class="bg-primary min-h-[85svh] flex flex-col justify-evenly items-center">
+  <!-- Container Main -->
+  <div class="h-[70%] w-full grid grid-cols-2">
+    <!-- Text Segment -->
+    <div class="flex flex-col justify-center items-start p-10">
+      <div
+        class="flex flex-col justify-start items-start text-secondary font-semibold text-8xl"
+      >
+        <h1>Cup in Hand,</h1>
+        <h1 class="-translate-y-3">Anywhere</h1>
+        <p class="text-2xl text-accent font-thin">
+          Your daily cup, ready when you are.
+        </p>
+      </div>
+      <button
+        class="bg-custom-orange hover:bg-custom-orange/90 transition cursor-pointer px-6 py-2 my-5 text-lg rounded-sm text-primary"
+        >Order Now</button
+      >
+    </div>
+
+    <!-- Image Segment -->
+    <div class="flex justify-center items-center p-10">
+      <!-- outer container -->
+      <div
+        class="flex w-full h-full justify-center items-center relative"
+      >
+        <h1
+          class="absolute text-9xl translate-x-[10%] font-semibold text-secondary/10"
+        >
+          CAPPUCCINOS
+        </h1>
+        <div class="relative">
+          <!-- Image -->
+          <img
+            class="rotate-30"
+            src="/public/assets/images/hero/hero-image-1.svg"
+          />
+          <!-- Shadow -->
+          <div>
+            <div
+              class="absolute bg-[#4d4d4d] rounded-full w-[70%] h-5 blur-xl bottom-0 left-1/2 -translate-x-1/2"
+            >
+            </div>
+          </div>
+        </div>
+
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Details Container -->
+  <div class="w-full text-accent h-[30%] grid grid-cols-3">
+    <!-- Detail 1 -->
+    <div
+      class="dashed-gradient-right flex flex-col items-center gap-2 text-sm font-light justify-center"
+    >
+      <div class="flex justify-start items-center gap-3">
+        <img class="size-5" src="/public/assets/icons/location-icon.svg" />
+        <p>123 Brew Street, Cityville</p>
+      </div>
+      <div class="flex justify-start items-center gap-2 text-sm">
+        <img class="size-5" src="/public/assets/icons/calendar-icon.svg" />
+        <p>Mon–Sun: 7 AM – 8 PM</p>
+      </div>
+    </div>
+
+    <!-- Detail 2 -->
+    <div class="flex flex-col justify-center items-center text-center">
+      <h2 class="text-secondary font-semibold">Our Drinks</h2>
+      <p class="text-sm font-light">
+        Iced coffees, lattes, cold brews, and seasonal specials
+      </p>
+    </div>
+    <!-- Detail 3 -->
+    <div class="dashed-gradient-left flex justify-center items-center">
+      <div class="font-light text-sm">
+        <p>(555) 123-4567</p>
+        <p>www.timpla.ph/store</p>
+      </div>
+    </div>
+  </div>
 </div>
