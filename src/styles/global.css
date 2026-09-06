@@ -5,6 +5,8 @@
   --color-primary: #ece6c2;
   --color-secondary: #6f5643;
   --color-accent: #4d4d4d;
+
+  --color-custom-orange: #CC6B49
   /* --color-background: #ece6c2; */
 }
 
@@ -32,3 +34,88 @@
   mask-position: bottom left;
   mask-repeat: no-repeat;
 }
+
+/* Vertical line on the right side */
+.dashed-gradient-right {
+  position: relative; /* Ensures the pseudo-element aligns to this container */
+}
+
+.dashed-gradient-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0; /* Pinned to the right edge */
+  width: 2px;
+  height: 100%;
+
+  /* 1. The Gradient Line */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(236, 230, 194, 0),
+    #6f5643 50%,
+    rgba(0, 0, 0, 0)
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* 2. The Mask (Only clips this 2px wide line) */
+  -webkit-mask-image: repeating-linear-gradient(
+    to bottom,
+    black,
+    black 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    black,
+    black 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+/* Vertical line on the left side */
+.dashed-gradient-left {
+  position: relative;
+}
+
+.dashed-gradient-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0; /* Pinned to the left edge */
+  width: 2px;
+  height: 100%;
+
+  /* 1. The Gradient Line */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(236, 230, 194, 0),
+    #6f5643 50%,
+    rgba(0, 0, 0, 0)
+  );
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* 2. The Mask */
+  -webkit-mask-image: repeating-linear-gradient(
+    to bottom,
+    black,
+    black 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    black,
+    black 6px,
+    transparent 6px,
+    transparent 10px
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
