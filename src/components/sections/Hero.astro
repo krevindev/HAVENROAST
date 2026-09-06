@@ -1,4 +1,6 @@
-<div class="bg-primary min-h-[85svh] px-10 flex flex-col justify-evenly items-center">
+<div
+  class="bg-primary min-h-[85svh] px-10 flex flex-col justify-evenly items-center"
+>
   <!-- Container Main -->
   <div class="h-[70%] w-full grid grid-cols-2">
     <!-- Text Segment -->
@@ -6,14 +8,14 @@
       <div
         class="flex flex-col justify-start items-start text-secondary font-extrabold text-8xl tracking-tighter leading-[80px] mb-3"
       >
-        <h1>Cup in Hand, Anywhere</h1>
+        <h1><span class="text-nowrap">Cup in Hand,</span> Anywhere</h1>
       </div>
       <p class="text-2xl tracking-wide text-accent font-light">
         Your daily cup, ready when you are.
       </p>
 
       <button
-        class="bg-custom-orange hover:bg-custom-orange/90 transition cursor-pointer px-6 py-2 my-5 text-lg rounded-sm text-primary"
+        class="bg-custom-orange hover:bg-custom-orange/90 transition cursor-pointer px-6 py-2 mt-5 text-lg rounded-sm text-primary"
         >Order Now</button
       >
     </div>
@@ -23,14 +25,14 @@
       <!-- outer container -->
       <div class="flex w-full h-full justify-center items-center relative">
         <h1
-          class="absolute text-9xl translate-x-[10%] font-semibold text-secondary/10"
+          class="absolute text-9xl translate-x-[10%] font-semibold text-secondary/10 overflow-hidden"
         >
           CAPPUCCINOS
         </h1>
         <div class="relative">
           <!-- Image -->
           <img
-            class="rotate-30"
+            class="rotate-30 w-[300px]"
             src="/public/assets/images/hero/hero-image-1.svg"
           />
           <!-- Shadow -->
@@ -51,13 +53,14 @@
   <div class="w-full text-accent h-[30%] grid grid-cols-3">
     <!-- Detail 1 -->
     <div
-      class="dashed-gradient-right flex flex-col items-center gap-2 text-sm font-light justify-center"
+      class="dashed-gradient-right flex flex-col items-center justify-center gap-2 text-sm font-light"
     >
-      <div class="flex justify-start items-center gap-3">
+      <div class="flex w-64 items-center justify-start gap-3">
         <img class="size-5" src="/public/assets/icons/location-icon.svg" />
         <p>123 Brew Street, Cityville</p>
       </div>
-      <div class="flex justify-start items-center gap-2 text-sm">
+
+      <div class="flex w-64 items-center justify-start gap-3">
         <img class="size-5" src="/public/assets/icons/calendar-icon.svg" />
         <p>Mon–Sun: 7 AM – 8 PM</p>
       </div>
