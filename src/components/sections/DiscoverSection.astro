@@ -1,0 +1,44 @@
+---
+import DiscoverItem from "./DiscoverItem.astro";
+---
+
+<div
+  class="bg-primary py-40 flex flex-col justify-center items-center w-full px-20"
+>
+  <div class="w-full flex flex-col justify-center items-center gap-3">
+    <!-- Title Container -->
+    <div class="text-center flex flex-col justify-center items-center gap-2">
+      <h1 class="text-secondary text-5xl font-bold">DISCOVER YOUR DAILY CUP</h1>
+      <p class="text-xl font-light text-accent">
+        Crafted for mornings, afternoons, and<br /> everything in between
+      </p>
+    </div>
+
+    <!-- Items Container -->
+    <div class="w-full py-5 grid grid-cols-3 h-fit">
+      <DiscoverItem
+        imgSrc="/public/assets/images/discover/iced-coffees.svg"
+        title="Iced Coffees"
+        description="Chilled, refreshing, perfect for on-the-go sipping"
+      />
+      <DiscoverItem
+        imgSrc="/public/assets/images/discover/latte-hotdrinks.svg"
+        title="Lattes & Hot Drinks"
+        description="Smooth, creamy, and crafted just for you"
+      />
+      <DiscoverItem
+        imgSrc="/public/assets/images/discover/cold-brew.svg"
+        title="Cold Brew"
+        description="Bold flavors, slow brewed, and ready to energize your day"
+        isLast
+      />
+    </div>
+
+    <!-- Button Container -->
+    <div>
+      <button class="bg-custom-orange text-primary px-4 py-2 rounded-sm"
+        >View Menu</button
+      >
+    </div>
+  </div>
+</div>
