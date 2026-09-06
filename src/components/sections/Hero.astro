@@ -32,6 +32,7 @@
         <div class="relative">
           <!-- Image -->
           <img
+            id="hero-image"
             class="rotate-30 w-[300px]"
             src="/public/assets/images/hero/hero-image-1.svg"
           />
@@ -82,3 +83,39 @@
     </div>
   </div>
 </div>
+
+<script>
+  import { animate } from "motion";
+
+  const heroImage = document.querySelector("#hero-image");
+
+  window.addEventListener("load", async () => {
+    await animate(
+      heroImage,
+      {
+        opacity: [0, 100],
+        x: [30, 0],
+        y: [30, 0],
+        rotate: [20, 3],
+      },
+      {
+        delay: 1.5,
+        type: "spring",
+        bounce: 0.5,
+      },
+    );
+
+    animate(
+      heroImage,
+      {
+        y: [0, 10, 0],
+        rotate: [3, 0, 3],
+      },
+      {
+        duration: 5,
+        ease: "easeOut",
+        repeat: Infinity,
+      },
+    );
+  });
+</script>
