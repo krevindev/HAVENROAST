@@ -1,0 +1,12 @@
+#splash-logo {
+  animation: splashLogoanim 1s forwards;
+}
+
+@keyframes splashLogoAnim {
+  from {
+    scale: 0.5;
+  }
+  to {
+    scale: 1;
+  }
+}

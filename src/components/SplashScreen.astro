@@ -1,0 +1,49 @@
+---
+const mainLogo = "/assets/logos/main-logo.svg";
+---
+
+<!-- Covers the website while the splash screen is visible -->
+<div
+  id="splash-screen"
+  class="fixed inset-0 z-[600] flex items-center justify-center bg-primary"
+>
+  <!-- This is the element Motion will animate first -->
+  <img id="splash-logo" src={mainLogo} alt="Havenroast" />
+</div>
+
+<script>
+  // Import Motion's animation function.
+  import { animate } from "motion";
+
+  // Get the HTML elements we want to animate.
+  const splashScreen = document.querySelector("#splash-screen");
+  const splashLogo = document.querySelector("#splash-logo");
+
+  // Wait until the page has loaded.
+  window.addEventListener("load", () => {
+    // Stop safely if either element cannot be found.
+    if (!splashScreen || !splashLogo) return;
+
+    // Animate the logo:
+    // invisible and small → visible and normal size.
+    animate(
+      splashLogo,
+      {
+        y: [10, 0],
+        opacity: [0, 1],
+      },
+      {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    );
+
+    // Wait 1.5 seconds, then fade out the full splash screen.
+    setTimeout(() => {
+      const fadeOut = animate(splashScreen, { opacity: 0 }, { duration: 0.5 });
+
+      // After fading out, remove it from the page completely.
+      fadeOut.then(() => splashScreen.remove());
+    }, 1500);
+  });
+</script>
