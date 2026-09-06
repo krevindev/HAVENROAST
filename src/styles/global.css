@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans/wght.css";
 
 @theme {
   /* Colors */
@@ -6,8 +7,8 @@
   --color-secondary: #6f5643;
   --color-accent: #4d4d4d;
 
-  --color-custom-orange: #CC6B49
-  /* --color-background: #ece6c2; */
+  --color-custom-orange: #cc6b49; /* --color-background: #ece6c2; */
+  --font-jakarta: "Plus Jakarta Sans Variable", sans-serif;
 }
 
 .dashed-gradient-bottom {
@@ -118,4 +119,3 @@
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 }
-
