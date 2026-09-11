@@ -14,6 +14,19 @@ import "../styles/global.css";
   </head>
   <body class="bg-primary overflow-x-hidden font-jakarta">
     <slot />
+
+    <script>
+      import Lenis from "lenis";
+      import "lenis/dist/lenis.css";
+
+      const lenis = new Lenis({
+        autoRaf: true,
+      });
+
+      lenis.on("scroll", (e) => {
+        console.log("lenis scrolling...");
+      });
+    </script>
   </body>
 </html>
 
