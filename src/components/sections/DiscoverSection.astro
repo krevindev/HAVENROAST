@@ -1,5 +1,6 @@
 ---
 import DiscoverItem from "./DiscoverItem.astro";
+import ArrowRight from "phosphor-astro/ArrowRight.astro";
 ---
 
 <div
@@ -17,17 +18,17 @@ import DiscoverItem from "./DiscoverItem.astro";
     <!-- Items Container -->
     <div class="w-full py-5 grid grid-cols-3 h-fit">
       <DiscoverItem
-        imgSrc="/public/assets/images/discover/iced-coffees.svg"
+        imgSrc="/assets/images/discover/iced-coffees.svg"
         title="Iced Coffees"
         description="Chilled, refreshing, perfect for on-the-go sipping"
       />
       <DiscoverItem
-        imgSrc="/public/assets/images/discover/latte-hotdrinks.svg"
+        imgSrc="/assets/images/discover/latte-hotdrinks.svg"
         title="Lattes & Hot Drinks"
         description="Smooth, creamy, and crafted just for you"
       />
       <DiscoverItem
-        imgSrc="/public/assets/images/discover/cold-brew.svg"
+        imgSrc="/assets/images/discover/cold-brew.svg"
         title="Cold Brew"
         description="Bold flavors, slow brewed, and ready to energize your day"
         isLast
@@ -36,8 +37,8 @@ import DiscoverItem from "./DiscoverItem.astro";
 
     <!-- Button Container -->
     <div>
-      <button class="bg-custom-orange text-primary px-4 py-2 rounded-sm"
-        >View Menu</button
+      <button class="bg-custom-orange text-primary px-4 py-2 rounded-sm flex justify-center items-center gap-2 shadow-md"
+        >View Menu <ArrowRight height={20} /></button
       >
     </div>
   </div>
