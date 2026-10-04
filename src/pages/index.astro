@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import SplashScreen from "../components/SplashScreen.astro";
 import DiscoverSection from "../components/sections/DiscoverSection.astro";
 import BrandIdentity from "../components/sections/BrandIdentity.astro";
+import { SHOW_SPLASH } from "astro:env/client";
 ---
 
 <Layout>
@@ -13,6 +14,7 @@ import BrandIdentity from "../components/sections/BrandIdentity.astro";
   <Header />
   <Hero />
   <DiscoverSection />
-  <BrandIdentity/>
-  <SplashScreen />
+  <BrandIdentity />
+
+  {SHOW_SPLASH && <SplashScreen />}
 </Layout>

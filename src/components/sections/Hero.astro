@@ -2,26 +2,23 @@
 import ArrowRight from "phosphor-astro/ArrowRight.astro";
 ---
 
-<div
-  class="bg-primary min-h-[85svh] px-10 flex flex-col justify-evenly items-center"
->
+<div class="bg-primary min-h-[85svh] px-10 flex flex-col justify-evenly items-center">
   <!-- Container Main -->
   <div class="h-[70%] w-full grid grid-cols-2">
     <!-- Text Segment -->
     <div class="flex flex-col gap-2 justify-center items-start p-10">
-      <div
-        class="flex flex-col justify-start items-start text-secondary font-extrabold text-8xl tracking-tighter leading-[80px] mb-3"
-      >
-        <h1><span class="text-nowrap">Cup in Hand,</span> Anywhere</h1>
+      <div class="flex flex-col justify-start items-start text-secondary font-extrabold text-8xl tracking-tighter leading-[80px] mb-3">
+        <h1>
+          <span class="text-nowrap">Cup in Hand,</span> Anywhere
+        </h1>
       </div>
       <p class="text-2xl tracking-wide text-accent font-light">
         Your daily cup, ready when you are.
       </p>
 
-      <button
-        class="bg-custom-orange hover:bg-custom-orange/90 transition cursor-pointer px-6 py-2 mt-5 text-lg rounded-sm text-primary"
-        >Order Now</button
-      >
+      <button class="bg-custom-orange hover:bg-custom-orange/90 transition cursor-pointer px-6 py-2 mt-5 text-lg rounded-sm text-primary">
+        Order Now
+      </button>
     </div>
 
     <!-- Image Segment -->
@@ -42,20 +39,13 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
           />
           <!-- Shadow -->
           <div>
-            <div
-              class="absolute bg-[#4d4d4d] rounded-full w-[70%] h-5 blur-xl bottom-0 left-1/2 -translate-x-1/2"
-            >
-            </div>
+            <div class="absolute bg-[#4d4d4d] rounded-full w-[70%] h-5 blur-xl bottom-0 left-1/2 -translate-x-1/2"></div>
           </div>
         </div>
 
-        <div
-          class="absolute right-0 bottom-0 flex justify-center items-center gap-2"
-        >
+        <div class="absolute right-0 bottom-0 flex justify-center items-center gap-2">
           <span class="text-accent font-thin">1/4</span>
-          <button
-            class="rounded-full p-3 bg-accent/10 flex justify-center items-center gap-1"
-          >
+          <button class="rounded-full p-3 bg-accent/10 flex justify-center items-center gap-1">
             <ArrowRight height={20} class="text-accent" />
           </button>
         </div>
@@ -66,9 +56,7 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
   <!-- Hero Details Container -->
   <div class="w-full text-accent h-[30%] grid grid-cols-3">
     <!-- Detail 1 -->
-    <div
-      class="dashed-gradient-right flex flex-col items-center justify-center gap-2 text-sm font-light"
-    >
+    <div class="dashed-gradient-right flex flex-col items-center justify-center gap-2 text-sm font-light">
       <div class="flex w-64 items-center justify-start gap-3">
         <img class="size-5" src="/assets/icons/location-icon.svg" />
         <p>123 Brew Street, Cityville</p>
@@ -84,7 +72,8 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
     <div class="flex flex-col justify-center items-center text-center">
       <h2 class="text-secondary font-semibold">Our Drinks</h2>
       <p class="text-sm font-light">
-        Iced coffees, lattes, cold brews,<br /> and seasonal specials
+        Iced coffees, lattes, cold brews,
+        <br /> and seasonal specials
       </p>
     </div>
     <!-- Detail 3 -->
@@ -98,7 +87,7 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
 </div>
 
 <script>
-  import { discriminatedUnion } from "astro:schema";
+  import { SHOW_SPLASH } from "astro:env/client";
   import { animate } from "motion";
 
   const heroImage = document.querySelector("#hero-image");
@@ -113,7 +102,7 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
         rotate: [20, 3],
       },
       {
-        delay: 1.5,
+        delay: SHOW_SPLASH ? 1.5 : 0,
         type: "spring",
         bounce: 0.5,
       },
