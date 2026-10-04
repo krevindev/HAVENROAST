@@ -1,0 +1,59 @@
+---
+// === Types ===
+type stepType = {
+  title: string;
+  description: string;
+};
+
+// === Data ===
+const stepsData: stepType[] = [
+  {
+    title: "01 — Quality First",
+    description: "We only brew when you order.",
+  },
+  {
+    title: "02 — Everyday Ritual",
+    description: "Coffee that fits your routine.",
+  },
+  {
+    title: "03 — Made to Move",
+    description: "Perfectly packed for life on the go.",
+  },
+];
+---
+
+<!-- === MAIN COMPONENT === -->
+<section class="min-h-screen h-fit flex-col justify-center items-center gap-5 px-[5vw] max-w-350">
+  <!-- Heading -->
+  <div class="justify-start items-center py-5">
+    <h1 class="font-extrabold text-[clamp(3rem,4vw,5rem)] leading-[0.9] text-secondary">
+      MORE THAN JUST A CUP
+    </h1>
+  </div>
+
+  <!-- Body -->
+  <div class="grid grid-cols-1 md:grid-cols-2 justify-self-center gap-5">
+    <!-- Image Part -->
+    <div
+      style="background-image: url(/assets/images/brand-identity/brand-identity-image.svg);"
+      class="bg-black bg-cover bg-no-repeat h-[30vh] md:min-h-[60vh] rounded-3xl"
+    />
+    <!-- Text Part -->
+    <div class="flex flex-col justify-center gap-5">
+      <p class="text-accent text-lg md:text-xl leading-relaxed tracking-normal font-light">
+        Designed for busy mornings, late-night work sessions, and slow weekend
+        afternoons. Great coffe shouldn't slow you down — it should move you.
+      </p>
+      <div class="grid grid-cols-1 gap-3">
+        {stepsData.map((stepItem) => (
+          <div class="">
+            <h1 class="text-secondary uppercase font-bold text-[clamp(1.5rem,2vw,2rem)]">
+              {stepItem.title}
+            </h1>
+            <p class="text-accent">{stepItem.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
