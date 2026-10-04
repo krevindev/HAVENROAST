@@ -1,6 +1,7 @@
 ---
 type Props = {
-  imgSrc: string;
+  imgSrc1: string;
+  imgSrc2?: string;
   title: string;
   description: string;
   isLast?: boolean;
@@ -10,10 +11,20 @@ const props = Astro.props;
 ---
 
 <div
-  class={`flex flex-col justify-center items-center text-center ${!props.isLast && "dashed-gradient-right"} `}
+  class={`discover-item flex flex-col justify-center items-center text-center ${!props.isLast && "dashed-gradient-right group relative"} `}
 >
   <!-- Band aid solution to larger image size -->
-  <img class={`${!props.isLast ? "w-[50%]" : "w-[40%]"}`} src={props.imgSrc} />
+  <div class="h-50 w-50 relative">
+    <img
+      class="img-1 -rotate-20 left-1/2 translate-x-[-80%] absolute w-[80%]"
+      src={props.imgSrc2}
+    />
+    <img
+      class="img-2 left-1/2 -translate-x-1/2 bottom-0 absolute w-full"
+      src={props.imgSrc1}
+    />
+  </div>
+
   <h2 class="text-secondary font-semibold text-2xl mt-4">{props.title}</h2>
   <p class="font-light w-[80%] text-accent text-sm">{props.description}</p>
 </div>

@@ -4,7 +4,7 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
 ---
 
 <div
-  class="bg-primary py-40 flex flex-col justify-center items-center w-full px-20"
+  class="bg-primary py-40 flex flex-col justify-center items-center w-full max-w-full px-20"
 >
   <div class="w-full flex flex-col justify-center items-center gap-3">
     <!-- Title Container -->
@@ -17,18 +17,28 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
 
     <!-- Items Container -->
     <div class="w-full py-5 grid grid-cols-3 h-fit">
-      <DiscoverItem
+      <!-- <DiscoverItem
         imgSrc="/assets/images/discover/iced-coffees.svg"
+        title="Iced Coffees"
+        description="Chilled, refreshing, perfect for on-the-go sipping"
+      /> -->
+
+      <!-- imgSrc="/assets/images/discover/iced-coffees.svg" -->
+      <DiscoverItem
+        imgSrc1="/assets/images/discover/iced-coffees/coffee2.png"
+        imgSrc2="/assets/images/discover/iced-coffees/coffee2.png"
         title="Iced Coffees"
         description="Chilled, refreshing, perfect for on-the-go sipping"
       />
       <DiscoverItem
-        imgSrc="/assets/images/discover/latte-hotdrinks.svg"
+        imgSrc1="/assets/images/discover/iced-coffees/coffee2.png"
+        imgSrc2="/assets/images/discover/iced-coffees/coffee2.png"
         title="Lattes & Hot Drinks"
         description="Smooth, creamy, and crafted just for you"
       />
       <DiscoverItem
-        imgSrc="/assets/images/discover/cold-brew.svg"
+        imgSrc1="/assets/images/discover/iced-coffees/coffee2.png"
+        imgSrc2="/assets/images/discover/iced-coffees/coffee2.png"
         title="Cold Brew"
         description="Bold flavors, slow brewed, and ready to energize your day"
         isLast
@@ -37,7 +47,8 @@ import ArrowRight from "phosphor-astro/ArrowRight.astro";
 
     <!-- Button Container -->
     <div>
-      <button class="bg-custom-orange text-primary px-4 py-2 rounded-sm flex justify-center items-center gap-2 shadow-md"
+      <button
+        class="bg-custom-orange text-primary px-4 py-2 rounded-sm flex justify-center items-center gap-2 shadow-md"
         >View Menu <ArrowRight height={20} /></button
       >
     </div>
