@@ -4,19 +4,11 @@ A coffee shop website built with Astro.
 
 ## Tech Stack
 
-* Astro
+* Astro + ReactJS
 * Tailwind CSS
 * Motion
 * Lenis
 * Phosphor Icons
-* Plus Jakarta Sans
-
-## Features
-
-* Responsive design
-* Smooth scrolling
-* Page and component animations
-* Mobile-friendly layout
 
 ## Getting Started
 
