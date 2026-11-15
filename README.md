@@ -2,14 +2,6 @@
 
 A coffee shop website built with Astro.
 
-## Tech Stack
-
-* Astro + ReactJS
-* Tailwind CSS
-* Motion
-* Lenis
-* Phosphor Icons
-
 ## Getting Started
 
 Clone the repository:
